@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_community_challenges/boats_challenge/main.dart';
 import 'package:flutter_community_challenges/coffee_challenge/coffee_app.dart';
 
 void main() {
@@ -36,9 +37,11 @@ class ChallengePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final apps = const [
       CoffeeChallengeApp(),
+      BoatsChallengeApp(),
     ];
     final appsTitle = const [
       'Coffee Challenge',
+      'Boats Challenge',
     ];
     return Scaffold(
       appBar: AppBar(

@@ -305,7 +305,7 @@ class _CoffeeSizeOption extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(
-              "assets/svg/$labelSize-coffee-cup.svg",
+              "assets/coffee_challenge/svg/$labelSize-coffee-cup.svg",
               width: 45.0,
               color: Colors.white,
             ),
