@@ -26,8 +26,6 @@ class CoffeeHomePage extends StatelessWidget {
   }
 
   void _onVerticalDragUpdate(BuildContext context, DragUpdateDetails details) {
-    print(details.primaryDelta);
-
     if (details.primaryDelta! > 2.0) {
       _openCoffeeListPage(context, SliderAction.Previous);
     } else if (details.primaryDelta! < -2.0) {

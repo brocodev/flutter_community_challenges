@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_community_challenges/coffee_challenge/ui/coffee_home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+class CoffeeChallengeApp extends StatelessWidget {
+  const CoffeeChallengeApp({Key? key}) : super(key: key);
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

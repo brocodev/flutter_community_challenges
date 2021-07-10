@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_community_challenges/coffee_challenge/coffee_app.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.light,
+  ));
   runApp(MyApp());
 }
 
@@ -8,57 +14,56 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Hispanic Community Challenges',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ChallengePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class ChallengePage extends StatelessWidget {
+  const ChallengePage({Key? key}) : super(key: key);
 
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _openApp(BuildContext context, Widget app) {
+    final route = MaterialPageRoute(builder: (context) => app);
+    Navigator.push(context, route);
   }
 
   @override
   Widget build(BuildContext context) {
+    final apps = const [
+      CoffeeChallengeApp(),
+    ];
+    final appsTitle = const [
+      'Coffee Challenge',
+    ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Flutter Community Challenges'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        child: ListView.builder(
+          itemCount: apps.length,
+          padding: const EdgeInsets.all(20.0),
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () => _openApp(context, apps[index]),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                ),
+                child: Text(
+                  appsTitle[index],
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            );
+          },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
