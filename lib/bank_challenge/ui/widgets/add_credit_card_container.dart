@@ -23,9 +23,9 @@ class AddCreditCardContainer extends StatelessWidget {
       maxHeight: size.height,
       maxWidth: size.width + 10,
       alignment:
-          Alignment.lerp(Alignment(0, .46), Alignment(-.52, 0), percent)!,
+          Alignment.lerp(Alignment(0, .385), Alignment(-.52, 0), percent)!,
       child: Container(
-        height: lerpDouble(size.height, height, percent),
+        height: lerpDouble(size.height + 100, height, percent),
         width: lerpDouble(size.width + 10, width, percent),
         decoration: BoxDecoration(
           color: BankColors.kDarkBlue,
@@ -123,7 +123,7 @@ class _HeaderAddCreditCard extends StatelessWidget {
               Icon(
                 Icons.credit_card,
                 color: Colors.white,
-                size: 28,
+                size: 20,
               ),
               const SizedBox(width: 10),
               Text(
@@ -131,7 +131,7 @@ class _HeaderAddCreditCard extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 20),
+                    fontSize: 16),
               )
             ],
           ),
@@ -140,7 +140,7 @@ class _HeaderAddCreditCard extends StatelessWidget {
               Icon(
                 Icons.credit_card,
                 color: Colors.white,
-                size: 28,
+                size: 20,
               ),
               const SizedBox(width: 10),
               Text(
@@ -148,17 +148,21 @@ class _HeaderAddCreditCard extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 20),
+                    fontSize: 16),
               ),
               const Spacer(),
               Align(
                 widthFactor: .2,
-                child: CircleAvatar(),
+                child: CircleAvatar(
+                  radius: 15,
+                ),
               ),
               CircleAvatar(
+                radius: 15,
                 backgroundColor: Colors.white,
                 child: Icon(
                   Icons.credit_card,
+                  size: 16,
                   color: BankColors.kLessDarkBlue,
                 ),
               )
