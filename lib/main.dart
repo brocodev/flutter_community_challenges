@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_community_challenges/boats_challenge/main.dart';
 import 'package:flutter_community_challenges/coffee_challenge/coffee_app.dart';
 
+import 'bank_challenge/bank_challenge_app.dart';
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
@@ -38,10 +40,12 @@ class ChallengePage extends StatelessWidget {
     final apps = const [
       CoffeeChallengeApp(),
       BoatsChallengeApp(),
+      BankChallengeApp(),
     ];
     final appsTitle = const [
       'Coffee Challenge',
       'Boats Challenge',
+      'Bank Challenge',
     ];
     return Scaffold(
       appBar: AppBar(

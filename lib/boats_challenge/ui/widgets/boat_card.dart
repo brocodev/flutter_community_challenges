@@ -28,8 +28,8 @@ class BoatCard extends StatelessWidget {
               alignment: Alignment(0, .5),
               scale: lerpDouble(1.0, 0.7, factorChange)!,
               child: Hero(
-                tag: boat.model!,
-                child: Image.asset(boat.imagePath!),
+                tag: boat.model,
+                child: Image.asset(boat.imagePath),
               ),
             ),
           ),

@@ -51,6 +51,7 @@ flutter:
     - assets/coffee_challenge/img/
     - assets/coffee_challenge/svg/
     - assets/boats_challenge/img/
+    - assets/bank_challenge/img/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
