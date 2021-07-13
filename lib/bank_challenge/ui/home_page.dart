@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_community_challenges/bank_challenge/model/bank_models.dart';
 import 'package:flutter_community_challenges/bank_challenge/ui/widgets/add_credit_card_container.dart';
 import 'package:flutter_community_challenges/bank_challenge/ui/widgets/account_card.dart';
+import 'package:flutter_community_challenges/bank_challenge/ui/widgets/header_home_page.dart';
+import 'package:flutter_community_challenges/bank_challenge/utils/colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -44,7 +46,7 @@ class _HomePageState extends State<HomePage> {
       _blueBgTranslatePercent = _pageController.page!;
     } else {
       _blueBgTransitionPercent = _pageController.page!;
-      _enableAddCreditCard = (_blueBgTransitionPercent < .3);
+      _enableAddCreditCard = (_blueBgTransitionPercent < .1);
       // print(_blueBgTransitionPercent);
     }
     setState(() {});
@@ -73,7 +75,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: SafeArea(
@@ -83,8 +84,8 @@ class _HomePageState extends State<HomePage> {
             // Header Home Page Widget
             //-------------------------------------
             Expanded(
-              flex: 5,
-              child: const _HeaderHomePage(),
+              flex: 4,
+              child: const HeaderHomePage(),
             ),
             Expanded(
               flex: 10,
@@ -162,38 +163,6 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class _HeaderHomePage extends StatelessWidget {
-  const _HeaderHomePage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
-            decoration: BoxDecoration(
-              color: Colors.blueGrey[50],
-              borderRadius: BorderRadius.circular(30),
-            ),
-          ),
-        ),
-        Container(
-          height: 8,
-          width: 60,
-          margin: const EdgeInsets.symmetric(vertical: 15),
-          decoration: BoxDecoration(
-            color: Colors.blueGrey[50],
-            borderRadius: BorderRadius.circular(30),
-          ),
-        )
-      ],
-    );
-  }
-}
-
 class _TransactionRow extends StatelessWidget {
   const _TransactionRow({
     Key? key,
@@ -226,14 +195,14 @@ class _TransactionRow extends StatelessWidget {
                 transaction.header,
                 style: TextStyle(
                   color: Colors.grey,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 transaction.concept,
                 style: TextStyle(
-                  color: Color(0xFF081A38),
-                  fontWeight: FontWeight.w500,
+                  color: BankColors.kTextColor,
+                  fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
               ),
@@ -243,8 +212,8 @@ class _TransactionRow extends StatelessWidget {
         Text(
           '\$${transaction.money}',
           style: TextStyle(
-            color: Color(0xFF081A38),
-            fontWeight: FontWeight.w700,
+            color: BankColors.kTextColor,
+            fontWeight: FontWeight.bold,
             fontSize: 18,
           ),
         )

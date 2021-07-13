@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_community_challenges/bank_challenge/utils/colors.dart';
 
 class AddCreditCardContainer extends StatelessWidget {
   const AddCreditCardContainer({
@@ -27,7 +28,7 @@ class AddCreditCardContainer extends StatelessWidget {
         height: lerpDouble(size.height, height, percent),
         width: lerpDouble(size.width + 10, width, percent),
         decoration: BoxDecoration(
-          color: Color(0xff0c0c32),
+          color: BankColors.kDarkBlue,
           borderRadius: BorderRadius.circular(30 * percent),
         ),
         child: AnimatedSwitcher(
@@ -37,12 +38,7 @@ class AddCreditCardContainer extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 5,
-                      child: Container(
-                        margin: const EdgeInsets.all(40.0),
-                        decoration: BoxDecoration(
-                            color: Color(0xff0e0e39),
-                            borderRadius: BorderRadius.circular(30)),
-                      ),
+                      child: const _HeaderAddCreditCard(),
                     ),
                     Expanded(
                       flex: 1,
@@ -51,7 +47,7 @@ class AddCreditCardContainer extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff16165a),
+                          color: BankColors.kLessDarkBlue,
                         ),
                       ),
                     ),
@@ -101,6 +97,74 @@ class AddCreditCardContainer extends StatelessWidget {
                 )
               : const SizedBox(),
         ),
+      ),
+    );
+  }
+}
+
+class _HeaderAddCreditCard extends StatelessWidget {
+  const _HeaderAddCreditCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(40.0),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      decoration: BoxDecoration(
+          color: BankColors.kSecondaryDarkBlue,
+          borderRadius: BorderRadius.circular(30)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.credit_card,
+                color: Colors.white,
+                size: 28,
+              ),
+              const SizedBox(width: 10),
+              Text(
+                'Credit Card',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.credit_card,
+                color: Colors.white,
+                size: 28,
+              ),
+              const SizedBox(width: 10),
+              Text(
+                'Open an account',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20),
+              ),
+              const Spacer(),
+              Align(
+                widthFactor: .2,
+                child: CircleAvatar(),
+              ),
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.credit_card,
+                  color: BankColors.kLessDarkBlue,
+                ),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
