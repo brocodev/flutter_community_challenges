@@ -1,4 +1,4 @@
-# flutter_community_challenges
+# Flutter Community Challenges
 
 Hispanic Community Flutter Challenges
 
