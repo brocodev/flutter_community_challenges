@@ -5,11 +5,13 @@ Hispanic Community Flutter Challenges
 ## 3.- Bank Challenge
 
 ## 2.- Boats Challenge
+[Flutter Boats Community Challenge | Retos de la comunidad | Animations | Animaciones | Challenge](https://www.youtube.com/watch?v=EEx2gSJFAPk)
 | Demo |
 |----------------|
 |<img src="https://media1.giphy.com/media/cooaFpE9NIh1xVOvEu/giphy.gif" width="250">
 
 ## 1.- Coffee Challenge
+[Flutter Challenges | Coffee shop | Q/A preguntas respuestas](https://www.youtube.com/watch?v=myyT-4BtiD8&t=1135s)
 | Demo 1 | Demo 2 |
 |----------------|--------------|
 |<img src="https://media4.giphy.com/media/A2WkSqOmUBxZa91vWK/giphy.gif" width="250">|<img src="https://media3.giphy.com/media/WgxTvDbIRNxAHXO5wF/giphy.gif" width="250">|
