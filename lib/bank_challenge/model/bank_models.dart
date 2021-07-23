@@ -79,8 +79,8 @@ class BankClient {
         BankClient('Christian Lake', 'assets/bank_challenge/img/user3.jpg', []),
         BankClient('Liam Smith', 'assets/bank_challenge/img/user4.jpg', []),
         BankClient('Carl ', 'assets/bank_challenge/img/user6.jpg', []),
-        BankClient('', 'assets/bank_challenge/img/user7.jpg', []),
-        BankClient('', 'assets/bank_challenge/img/user8.jpg', []),
+        BankClient('Guadalupe', 'assets/bank_challenge/img/user7.jpg', []),
+        BankClient('Liliano', 'assets/bank_challenge/img/user8.jpg', []),
       ];
 }
 

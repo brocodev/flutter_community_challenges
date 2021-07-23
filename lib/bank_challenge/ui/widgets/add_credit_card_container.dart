@@ -131,7 +131,7 @@ class _HeaderAddCreditCard extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 16),
+                    fontSize: 14),
               )
             ],
           ),
@@ -148,21 +148,21 @@ class _HeaderAddCreditCard extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 16),
+                    fontSize: 14),
               ),
               const Spacer(),
               Align(
                 widthFactor: .2,
                 child: CircleAvatar(
-                  radius: 15,
+                  radius: 12,
                 ),
               ),
               CircleAvatar(
-                radius: 15,
+                radius: 12,
                 backgroundColor: Colors.white,
                 child: Icon(
                   Icons.credit_card,
-                  size: 16,
+                  size: 14,
                   color: BankColors.kLessDarkBlue,
                 ),
               )
